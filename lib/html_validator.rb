@@ -1,4 +1,7 @@
+$LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'nokogiri'
+require 'rspec'
+require 'matchers/valid_xhtml'
 
 module HtmlValidator
   VERSION = "0.0.1"
