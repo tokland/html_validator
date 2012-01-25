@@ -1,6 +1,6 @@
 # Html Validator
 
-TODO: Write a gem description
+Matchers for Rspec2 to validate Rails views locally using Nokogiri.
 
 ## Installation
 
@@ -18,7 +18,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    describe UsersController do
+      render_views
+
+      describe "GET show" do
+          before { get :show }
+
+          it { response.should be_valid_xhtml }
+        end
+      end
+    end
 
 ## Contributing
 
